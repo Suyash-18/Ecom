@@ -15,7 +15,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <div >
-                    <img src="../public/book.png" className="w-[300px] ml-auto" alt="hero img" />
+                    <img src="/book.png" className="w-[300px] ml-auto" alt="hero img" />
                 </div>
             </div>
         </div>
