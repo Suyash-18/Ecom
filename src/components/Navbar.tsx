@@ -2,7 +2,7 @@ import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import { useAppSelector } from "../redux/hooks";
 
-export default function Navbar() {
+export default function Navbar({setCart} : any) {
 
     const cartCount = useAppSelector((state) => state.cartReducer.length)
 
@@ -25,7 +25,7 @@ export default function Navbar() {
                                 <p className="font-medium">Your Account</p>
                             </div>
                         </div>
-                        <div className="text-gray-500 text-[32px] relative">
+                        <div className="text-gray-500 text-[32px] relative" onClick={() => setCart(true)}>
                             <AiOutlineShoppingCart />
                             <div className="absolute top-[-15px] right-[-10px] bg-red-600 w-[25px] h-[25px] rounded-full text-white text-[14px] grid place-items-center">
                                 {cartCount}

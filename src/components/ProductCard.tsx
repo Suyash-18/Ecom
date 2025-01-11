@@ -30,7 +30,7 @@ export default function ProductCard({id, title, img, price, genre}: propType) {
     return(
         <div className="border border-gray-200">
             <div className="text-center border-b border-gray-200">
-                <img className="inline-block h-72" src={img} alt={title} />
+                <img className="inline-block h-60" src={img} alt={title} />
             </div>
             <div className="px-8 py-4">
                 <p className="text-gray-500 text-[14px] font-medium">{genre}</p>
@@ -46,7 +46,7 @@ export default function ProductCard({id, title, img, price, genre}: propType) {
                 </div>
                 <div className="flex justify-between items-center mt-4">
                     <h2 className="font-medium text-accent text-xl">${price}</h2>
-                    <div className="flex gap-2 items-center bg-pink text-white px-4 py-2 cursor-pointer hover:bg-accent" onClick={addProductToCart}>
+                    <div className="flex gap-2 items-center bg-pink transition duration-300 ease-out rounded-md text-white px-4 py-2 cursor-pointer hover:bg-accent" onClick={addProductToCart}>
                         <AiOutlineShoppingCart />
                         <p>Add to Cart</p>
                     </div>
